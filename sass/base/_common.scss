@@ -1,0 +1,17 @@
+body {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 700;
+    background-color: $main-color;
+    color: $body-color;
+}
+
+/* стили ссылок */
+.link {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $link-active-color;
+    }
+}
