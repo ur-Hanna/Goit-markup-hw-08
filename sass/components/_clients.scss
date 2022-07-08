@@ -1,0 +1,65 @@
+/* КЛИЕНТЫ */
+.clients {
+    background-color: inherit;
+    padding: 94px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.clients__heading {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $heading-color;
+    margin-bottom: 50px;
+}
+
+.clients__list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients__item {
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.clients__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    padding: 16px 32px;
+    border: 1px solid $clients-main-color;
+    border-radius: 4px;
+    color: $clients-main-color;
+    transition-property: color, border;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $link-active-color;
+        color: $link-active-color;
+        outline: transparent;
+    }
+}
+
+/* цвет иконок клиентов*/
+.clients__icon {
+    display: block;
+    fill: currentColor;
+}

@@ -1,0 +1,109 @@
+.card-set {
+    @extend %list;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $mobile) {}
+
+    @media screen and(min-width: $tablet) {
+        display: flex;
+        gap: 30px;
+    }
+
+    @media screen and(min-width: $desktop) {
+        display: flex;
+        gap: 30px;
+    }
+}
+
+.card-set__item {
+    background-color: $main-color;
+    transition: box-shadow 250ms $timing-function;
+
+    @media screen and (min-width: $mobile) {
+        // display: flex;
+        // flex-direction: column;
+    }
+
+    @media screen and(min-width: $tablet) {
+        display: flex;
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and(min-width: $desktop) {
+        display: flex;
+        flex-basis: calc((100% - 60px) / 3);
+    }
+}
+
+.card-set__link:hover,
+.card-set__link:focus {
+    @include card-shadow;
+    outline: transparent;
+}
+
+.card-set__image {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.card-set__meta {
+    padding: 20px 24px;
+    @include card-border;
+}
+
+.card-set__title {
+    font-weight: inherit;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $card-title-color;
+    margin: 0 auto 4px;
+}
+
+/* апперкейс для LAB */
+.upper {
+    text-transform: uppercase;
+}
+
+.card-set__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: $description-color;
+    margin: 0 auto;
+}
+
+/* стили скрытого текста в карточках Портфолио */
+.card-set__overlay {
+    position: relative;
+    width: 370px;
+    height: 294px;
+    background-color: inherit;
+    overflow: hidden;
+    cursor: text;
+}
+
+.card-set__description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translatey(101%);
+    transition: transform 250ms $timing-function;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: $card-description-color;
+
+    .card-set__link:hover & {
+        transform: translatey(0);
+    }
+}

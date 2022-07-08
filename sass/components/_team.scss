@@ -1,0 +1,116 @@
+/* КОМАНДА */
+.team {
+    background-color: $team-back-color;
+    padding: 94px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.team__heading {
+    font-weight: inherit;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $heading-color;
+    margin-bottom: 50px;
+}
+
+.team__list {
+    @extend %list;
+    display: flex;
+    align-items: center;
+}
+
+.team__item {
+    width: 270px;
+    background-color: $main-color;
+    @include team-item-shadow;
+    border-radius: 0px 0px 4px 4px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.team__image {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.team-meta {
+    padding: 30px 0;
+}
+
+.team-meta__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $card-title-color;
+    margin: 0 auto 10px;
+}
+
+.team-meta__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $description-color;
+    margin: auto 0 16px;
+}
+
+/* список иконок соцсетей команды */
+.team-meta__list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 206px;
+    margin: 0 auto;
+}
+
+.team-meta__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    background-color: $main-color;
+    border-radius: 50%;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.team-meta__link {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+    color: $team-subtitle-color;
+    transition-property: color, background;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+        background-color: $link-active-color;
+        color: $button-color;
+        border-radius: 50%;
+    }
+}
+
+.team-meta__icon {
+    display: block;
+    fill: currentColor;
+}

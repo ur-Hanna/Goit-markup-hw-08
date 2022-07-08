@@ -1,0 +1,58 @@
+/* БЛОК ПРИСОЕДИНЯЙТЕСЬ */
+.join {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 206px;
+  padding-top: 12px;
+  margin-right: 93px;
+}
+
+.join__title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $footer-main-color;
+  margin-bottom: 20px;
+}
+
+.join__list {
+  @extend %list;
+  display: flex;
+}
+
+.join__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.join__link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  color: $button-color;
+  @include transition-background;
+
+  &:hover,
+  &:focus {
+    background-color: $link-active-color;
+    border-radius: 50%;
+    color: $button-color;
+  }
+}
+
+.join__icon {
+  display: block;
+  fill: currentColor;
+}

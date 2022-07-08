@@ -1,0 +1,16 @@
+/* ФУТЕР */
+.footer {
+    background-color: $footer-back-color;
+    height: 252px;
+    padding: 60px 0;
+
+    .container {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.footer__logo {
+    color: $footer-main-color;
+    margin-bottom: 20px;
+}

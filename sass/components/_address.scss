@@ -1,0 +1,29 @@
+.address {
+    width: 231px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    &--params {
+        width: 231px;
+        margin-right: 70px;
+    }
+}
+
+.address__text {
+    display: block;
+    width: 231px;
+    color: $footer-main-color;
+}
+
+.address__link {
+    width: 231px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 9px;
+    @include transition-color;
+}

@@ -1,0 +1,67 @@
+/* --------СТРАНИЦА СТУДИЯ-------- */
+.main-index {
+    background-color: inherit;
+    color: inherit;
+}
+
+/* ГЕРОЙ */
+.hero {
+    // padding: 200px 0;
+    background-color: $hero-back-color;
+
+    .container {
+        // display: flex;
+        // flex-direction: column;
+        align-items: center;
+    }
+}
+
+.hero--overlay {
+    // max-width: 1600px;
+    // display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    // height: 600px;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/hero-bg-mob.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: $mobile) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/);
+    }
+}
+
+.hero__heading {
+    // width: 696px;
+    width: 100%;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $hero-heading-color;
+    text-align: center;
+    margin: 0 auto 30px;
+
+    @media screen and (min-width: $mobile) {
+        font-size: 26px;
+        line-height: 1.62;
+    }
+
+    @media screen and (min-width: $tablet) {
+        font-size: 26px;
+        line-height: 1.62;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 44px;
+        line-height: 1.36;
+    }
+}
+
+.hero__btn {
+    @extend %btn;
+}

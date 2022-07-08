@@ -1,0 +1,69 @@
+/* ЗАНЯТИЯ */
+.work {
+    background-color: inherit;
+    padding: 94px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.work__heading {
+    font-weight: inherit;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $heading-color;
+    margin-bottom: 50px;
+}
+
+.work__list {
+    @extend %list;
+    display: flex;
+    align-items: center;
+}
+
+.work__item {
+    width: 370px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.work__meta {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 0;
+}
+
+.work__image {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.work--gray-overlay {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+    padding: 27px 0;
+    margin: 0 auto;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+/* стили подписи к картинкам занятий*/
+.work__title {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $footer-main-color;
+}

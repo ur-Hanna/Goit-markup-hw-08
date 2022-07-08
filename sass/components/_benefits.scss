@@ -1,0 +1,70 @@
+/* ПРЕИМУЩЕСТВА */
+.benefits {
+    display: flex;
+    align-items: center;
+    padding-top: 94px;
+}
+
+.benefits__list {
+    @extend %list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefits__item {
+    width: 270px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    /* список иконок в преимуществах */
+    &::before {
+        content: '';
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        // height: 120px;
+        background-color: $benefits-image-color;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 4px;
+        margin-bottom: 30px;
+    }
+
+    &:nth-child(1)::before {
+        background-image: url(../../images/antenna.svg);
+    }
+
+    &:nth-child(2)::before {
+        background-image: url(../../images/clock.svg);
+    }
+
+    &:nth-child(3)::before {
+        background-image: url(../../images/diagram.svg);
+    }
+
+    &:nth-child(4)::before {
+        background-image: url(../../images/astronaut.svg);
+    }
+}
+
+.benefits__title {
+    margin-bottom: 10px;
+    font-weight: inherit;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $heading-color;
+}
+
+.benefits__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $description-color;
+}

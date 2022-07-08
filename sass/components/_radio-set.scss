@@ -1,0 +1,40 @@
+.radio-set {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+    &__item:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+/* радио-кнопки */
+.radio-set__btn {
+    display: inline-flex;
+    padding: 6px 22px;
+
+    font-family: $main-font;
+    font-style: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $radio-color;
+
+    background-color: $radio-back-color;
+    border: none;
+    border-radius: 4px;
+    transition: 250ms $timing-function;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        color: $button-color;
+        @include radio-shadow;
+        outline: transparent;
+    }
+}
