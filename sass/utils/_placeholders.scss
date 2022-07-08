@@ -1,0 +1,37 @@
+// стиль кнопок hero, subscribe, modal
+%btn {
+    display: inline-flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+
+    font-family: $main-font;
+    font-style: inherit;
+    font-weight: inherit;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $button-color;
+
+    cursor: pointer;
+
+    background: $button-back-color;
+    @include transition-background;
+    @include btn-shadow;
+    border: none;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+        background: $button-active-color;
+        outline: transparent;
+    }
+}
+
+// убирает стиль списка
+%list {
+    list-style: none;
+}
+
+
+/* identical to box height, or 162% second param - radio*/
