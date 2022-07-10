@@ -1,51 +1,82 @@
 /* КОМАНДА */
 .team {
     background-color: $team-back-color;
-    padding: 94px 0;
+    padding: 45px 0;
 
-    .container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+    @media screen and (min-width: $mobile) {
+        padding: 60px 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 94px 0;
+
+        // .container { display: flex;align-items: center;flex-direction: column;}
     }
 }
 
 .team__heading {
     font-weight: inherit;
-    font-size: 36px;
-    line-height: 1.16;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
     color: $heading-color;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 36px;
+        line-height: 1.16;
+        margin-bottom: 50px;
+    }
 }
 
 .team__list {
     @extend %list;
-    display: flex;
-    align-items: center;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }
 
 .team__item {
-    width: 270px;
+    width: 100%;
+    max-width: 100%;
     background-color: $main-color;
     @include team-item-shadow;
     border-radius: 0px 0px 4px 4px;
 
     &:not(:last-child) {
-        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $mobile) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        flex-basis: calc((100% - 30px) /2);
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 90px) /4);
     }
 }
 
-.team__image {
-    display: block;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-}
-
 .team-meta {
-    padding: 30px 0;
+    padding: 30px 0 24px;
+
+    @media screen and (min-width: $desktop) {
+        padding: 30px 0;
+    }
+
 }
 
 .team-meta__title {
@@ -98,15 +129,14 @@
     padding: 12px;
     border-radius: 50%;
     color: $team-subtitle-color;
-    transition-property: color, background;
-    transition-duration: 250ms;
-    transition-timing-function: $timing-function;
+    transition: color, background, 250ms $timing-function;
 
     &:hover,
     &:focus {
         background-color: $link-active-color;
         color: $button-color;
         border-radius: 50%;
+        outline: transparent;
     }
 }
 
