@@ -19,31 +19,21 @@
     }
 }
 
-.logo {
-    font-family: $logo-font-family;
-    font-weight: inherit;
-    width: 145px;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    display: flex;
-}
-
 .navigation__logo {
     margin-right: 93px;
     color: $header-logo-color;
 }
 
-.logo--first-part {
-    color: $accent-color;
-}
-
 .navigation__list {
     @extend %list;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .navigation__item {
