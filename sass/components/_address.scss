@@ -1,29 +1,60 @@
+.address--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 232px;
+    margin-bottom: 45px;
+
+    @media screen and (min-width: $mobile) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        align-items: flex-start;
+        margin-right: 70px;
+        margin-bottom: 0;
+    }
+}
+
 .address {
-    width: 231px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
 
-    &--params {
-        width: 231px;
-        margin-right: 70px;
+    @media screen and (min-width: $desktop) {
+        align-items: flex-start;
     }
 }
 
 .address__text {
-    display: block;
-    width: 231px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 8px;
     color: $footer-main-color;
+
+    @media screen and (min-width: $desktop) {
+        text-align: start;
+    }
+}
+
+.address__list {
+    @extend %list;
+}
+
+.address__item {
+    &:nth-child(1) {
+        margin-bottom: 8px;
+    }
 }
 
 .address__link {
-    width: 231px;
     color: rgba(255, 255, 255, 0.6);
-    margin-top: 9px;
     @include transition-color;
 }
