@@ -1,0 +1,14 @@
+.logo {
+    display: block;
+    font-family: $logo-font-family;
+    font-weight: inherit;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    width: 145px;
+}
+
+.logo--first-part {
+    color: $accent-color;
+}
