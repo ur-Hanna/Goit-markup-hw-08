@@ -20,18 +20,9 @@
     @include btn-shadow;
     border: none;
     border-radius: 4px;
-
-    &:hover,
-    &:focus {
-        background: $button-active-color;
-        outline: transparent;
-    }
 }
 
 // убирает стиль списка
 %list {
     list-style: none;
 }
-
-
-/* identical to box height, or 162% second param - radio*/
