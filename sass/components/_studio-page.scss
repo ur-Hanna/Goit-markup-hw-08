@@ -89,4 +89,10 @@
 .hero__btn {
     @extend %btn;
     justify-content: center;
+
+    &:hover,
+    &:focus {
+        background: $button-active-color;
+        outline: transparent;
+    }
 }
