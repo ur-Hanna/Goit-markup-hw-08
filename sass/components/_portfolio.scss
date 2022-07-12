@@ -6,7 +6,20 @@
 
 /* ПРОЕКТЫ */
 .projects {
-    display: flex;
-    align-items: center;
-    padding: 94px 0;
+    width: 100%;
+    padding: 45px 0;
+
+    @media screen and (min-width: $mobile) {
+        padding: 60px 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 94px 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
