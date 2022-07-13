@@ -5,7 +5,7 @@
     @include header-bottom;
 
     @media screen and (min-width: $tablet) {
-        padding: 21px 0;
+        padding: 20px 0;
     }
 
     @media screen and (min-width: $desktop) {
@@ -60,16 +60,13 @@
 
 .navigation__link {
     position: relative;
+    padding: 32px 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: $heading-color;
     @include transition-color;
-
-    @media screen and (min-width: $tablet) {
-        padding: 32px 0;
-    }
 
     &.current {
         position: relative;
