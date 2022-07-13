@@ -24,7 +24,7 @@
 }
 
 // header
-@mixin header-border() {
+@mixin header-bottom {
     border-bottom: 1px solid $header-border-color;
 }
 
