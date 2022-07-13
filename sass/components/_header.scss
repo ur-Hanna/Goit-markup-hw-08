@@ -1,8 +1,16 @@
 /* ШАПКА */
 .header {
     background-color: $main-color;
-    padding: 24px 0;
-    @include header-border;
+    padding: 10px 0;
+    @include header-bottom;
+
+    @media screen and (min-width: $tablet) {
+        padding: 21px 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 24px 0;
+    }
 
     .container {
         display: flex;
@@ -20,28 +28,33 @@
 }
 
 .navigation__logo {
-    margin-right: 93px;
     color: $header-logo-color;
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 88px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 93px;
+    }
 }
 
 .navigation__list {
     @extend %list;
-
     display: none;
 
     @media screen and (min-width: $tablet) {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
     }
 }
 
 .navigation__item {
-    margin-right: 50px;
     justify-content: center;
 
-    &:last-child {
-        margin-right: 0;
+    &:not(:last-child) {
+        margin-right: 50px;
     }
 }
 
@@ -52,8 +65,11 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: $heading-color;
-    padding: 32px 0;
     @include transition-color;
+
+    @media screen and (min-width: $tablet) {
+        padding: 32px 0;
+    }
 
     &.current {
         position: relative;
